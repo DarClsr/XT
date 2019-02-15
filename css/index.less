@@ -1,0 +1,213 @@
+@charset "utf-8";
+@c_w:100%;
+@c-h:100%;
+@auto:auto;
+@m_0:0;
+@p_0:0;
+.bg_pos(@a,@b){
+  background-position: @a,@b;
+}
+.bg_color(@color){
+  background-color: @color;
+}
+.css(@name,@value){
+  -webkit-@{name}:@value;
+  -moz-@{name}:@value;
+  -ms-@{name}:@value;
+  -o-@{name}:@value;
+}
+.container{
+  width: @c_w;
+  height: @c-h;
+  min-width: 968px;
+  .header{
+    width: @c_w;
+    height: 125px;
+   .bg_color(white);
+    .top_hd{
+      width: @c_w;
+      height: 40px;
+      background-color: black;
+      margin: @m_0 @auto;
+      .top_left{
+        width: @c_w/2;
+        float: left;
+        height: @c-h;
+        margin-left: 3%;
+        .top_phone{
+          width: @auto;
+          height: 40px;
+          line-height: 40px;
+          color: white;
+          float: left;
+          span{
+            padding: @p_0 5px;
+          }
+        }
+        .top_group{
+          width: auto;
+          height: 40px;
+          float: left;
+          img{
+            margin-top: 10px;
+            margin-left: 10px;
+          }
+        }
+      }
+      .top_right{
+        width: @c_w/3;
+        float: right;
+        margin-right: 2%;
+        .top_link{
+          width: 20%;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          float: left;
+          box-sizing: border-box;
+          font-size: 14px;
+          color: #bebebe;
+          .css(transition,all .3s linear);
+          &:hover{
+            color: white;
+          }
+        }
+      }
+    }
+    .hd_nav{
+      width: 95%;
+      height: 85px;
+      margin: @m_0 @auto;
+      .bg_color(white);
+       .logo{
+         width: 28%;
+         height: @c-h;
+         float: left;
+         text-align: center;
+           img{
+             margin-top: 7px;
+           }
+       }
+      .nav{
+        width:58%;
+        height: @c-h;
+        float: left;
+        ul{
+          width: @c_w;
+          height: @c-h;
+          li{
+            width: 20%;
+            height: @c-h;
+            line-height: 80px;
+            text-align: center;
+            position: relative;
+            float: left;
+            color: #333;
+            box-sizing: border-box;
+            border: 1px solid transparent;
+            border-top: 4px solid white;
+            font-size: 16px;
+            .css(transition,all .2s linear);
+            span{
+              width: @c_w;
+              height: @c-h;
+              display: block;
+              i{
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                right: 5px;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+                background: url("../img/icon.png")  no-repeat -182px -22px;
+              }
+            }
+            &:hover{
+              border-top-color: coral;
+              border-right-color: #f2f2f2;
+              border-left-color: #f2f2f2;
+            }
+          }
+        }
+
+      }
+      .user_info{
+        width: 14%;
+        float: left;
+        height: @c-h;
+          .img_box{
+            width: 50%;
+            height:@c-h;
+            float: left;
+            text-align: right;
+            img{
+              width: 35px;
+              margin-top: 27px;
+
+              border-radius: 50%;
+            }
+          }
+        .my{
+          width: 50%;
+          height:@c-h;
+          float: left;
+          line-height: 85px;
+          text-align: center;
+          a:hover{
+            color: red;
+          }
+        }
+      }
+    }
+  };
+  .main{
+    width: @c_w;
+    height: auto;
+    background: #f2f2f2;
+    .banner{
+      width: @c_w;
+      height: 355px;
+      position: relative;
+       .img{
+           width: @c_w;
+         height: @auto;
+         position: relative;
+         a{
+           width: @c_w;
+           height: @c-h;
+           position: absolute;
+           text-decoration: none;
+           left: 0;
+           top: 0;
+           border: none;
+           img{
+             display: block;
+            height: auto;
+             width: inherit;
+           }
+         }
+
+       }
+      .alink{
+        width: 50%;
+        height: 20px;
+        position: absolute;
+        left: 10%;
+        bottom: 20px;
+        a{
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          margin-left: 30px;
+          background: white;
+          float: left;
+        }
+        .img_active{
+           .css(transform,scale(1.3,1.3));
+          background-color:#ff5859 ;
+        }
+      }
+    }
+  }
+}
